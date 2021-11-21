@@ -12,7 +12,6 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Data
 public class WishListEntity extends MemoryDbEntity {
-
     private String title;
     private String category;
     private String address;
