@@ -9,7 +9,6 @@ abstract public class MemoryDbRepositoryAbstract<T extends MemoryDbEntity> imple
     private final List<T> db = new ArrayList<>();
     private int index = 0;
 
-
     @Override
     public Optional<T> findById(int index) {
         //MemoryDbEntity
@@ -42,13 +41,15 @@ abstract public class MemoryDbRepositoryAbstract<T extends MemoryDbEntity> imple
     @Override
     public void deleteById(int index) {
         var optionalEntity = db.stream().filter(it -> it.getIndex() == index).findFirst();
+        System.out.println(optionalEntity.get());
+
         if(optionalEntity.isPresent()){
             db.remove(optionalEntity.get());
         }
     }
 
     @Override
-    public List<T> listAll() {
+    public List<T> findAll() {
         return db;
     }
 }

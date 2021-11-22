@@ -6,4 +6,8 @@ naver:
   client:
     id: 5D8ZjYokl1BotrHRWtCm
     secret: P4oM47XyHE
+server:
+  servlet:
+    encoding:
+      force-response: true
 
