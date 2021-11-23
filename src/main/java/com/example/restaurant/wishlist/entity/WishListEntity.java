@@ -22,6 +22,4 @@ public class WishListEntity extends MemoryDbEntity {
     private boolean isVisit;
     private int visitCount;
     private LocalDateTime lastVisitDate;
-    
-
 }
